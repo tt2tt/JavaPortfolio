@@ -8,7 +8,7 @@ import java.util.Optional;
 @Mapper
 public interface UserRepository {
 
-    @Select("select * from users where name = #{username}")
-    Optional<User> findByLoginUser(String username);
+    @Select("select * from users where email = #{email}")
+    Optional<User> findByLoginUser(String email);
 
 }
